@@ -5083,6 +5083,7 @@ function Starlight:CreateWindow(WindowSettings)
 				]=]
 
 				function Groupbox:CreateButton(ElementSettings, Index)
+					Index = Index or ElementSettings.Name or HttpService:GenerateGUID(false)
 					--[[
 					ElementSettings = {
 						Name = string,
@@ -5346,6 +5347,7 @@ function Starlight:CreateWindow(WindowSettings)
 				end
 
 				function Groupbox:CreateToggle(ElementSettings, Index)
+					Index = Index or ElementSettings.Name or HttpService:GenerateGUID(false)
 					--[[
 					ElementSettings = {
 						Name = string,
@@ -5858,6 +5860,7 @@ function Starlight:CreateWindow(WindowSettings)
 				-- pls dont attack me :sob: i spent five hours tryna make it work and i js couldnt take it anymore
 				-- it only helped with logic-ing the steps, i still coded it muaself hehe (but thats why its so damn messy)
 				function Groupbox:CreateSlider(ElementSettings, Index)
+					Index = Index or ElementSettings.Name or HttpService:GenerateGUID(false)
 					--[[
 					ElementSettings = {
 						Name = string,
@@ -6309,6 +6312,7 @@ function Starlight:CreateWindow(WindowSettings)
 				end
 
 				function Groupbox:CreateInput(ElementSettings, Index)
+					Index = Index or ElementSettings.Name or HttpService:GenerateGUID(false)
 					--[[
 					ElementSettings = {
 						Name = string,
@@ -6595,6 +6599,7 @@ function Starlight:CreateWindow(WindowSettings)
 				end
 
 				function Groupbox:CreateLabel(ElementSettings, Index)
+					Index = Index or ElementSettings.Name or HttpService:GenerateGUID(false)
 					--[[
 					ElementSettings = {
 						Name = string,
@@ -8713,6 +8718,7 @@ function Starlight:CreateWindow(WindowSettings)
 				end
 
 				function Groupbox:CreateParagraph(ElementSettings, Index)
+					Index = Index or ElementSettings.Name or HttpService:GenerateGUID(false)
 					--[[
 					ElementSettings = {
 						Name = string,
