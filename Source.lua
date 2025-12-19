@@ -4081,6 +4081,7 @@ function Starlight:CreateWindow(WindowSettings)
 			end]]
 
 			function Tab:CreateGroupbox(GroupboxSettings, GroupIndex)
+				GroupIndex = GroupIndex or GroupboxSettings.Name or HttpService:GenerateGUID(false)
 				--[[
 				GroupboxSettings = {
 					Name = string,
@@ -4139,7 +4140,7 @@ function Starlight:CreateWindow(WindowSettings)
 					Groupbox.Instance.Header.Text = GroupboxSettings.Name
 					Groupbox.Instance.Header.UIPadding.PaddingLeft =
 						UDim.new(0, not String.IsEmptyOrNull(GroupboxSettings.Icon) and 32 or 6)
-					Groupbox.Instance.Header.Icon.Image = "rbxassetid://" .. GroupboxSettings.Icon
+					Groupbox.Instance.Header.Icon.Image = not String.IsEmptyOrNull(GroupboxSettings.Icon) and ("rbxassetid://" .. GroupboxSettings.Icon) or ""
 					Groupbox.Instance.Name = "GROUPBOX_" .. GroupIndex
 
 					ThemeMethods.bindTheme(Groupbox.Instance.Header, "TextColor3", "Foregrounds.Medium")
